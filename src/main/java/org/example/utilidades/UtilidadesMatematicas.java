@@ -1,16 +1,16 @@
-package org.example;
+package org.example.utilidades;
 
 /**
  * Clase final que contiene funciones (métodos estáticos) no vinculadas a ningún objeto.
  * No tiene sentido, por tanto, que se pueda heredar de ella (por eso la declaramos final), ni
  * crear objetos de ella (por eso le añadimos un constructor privado)
  */
-public final class Utilidades {
+public final class UtilidadesMatematicas {
 
     /**
      * Constructor privado para que la clase no sea instanciable
      */
-    private Utilidades(){}
+    private UtilidadesMatematicas(){}
 
     /**
      * Función trivial que calcula una división
@@ -33,30 +33,4 @@ public final class Utilidades {
         return resultado;
     }
 
-    public static boolean busca(char c, char[] v) {
-        int a, z, m;
-        a = 0;
-        z = v.length - 1;
-        boolean resultado = false;
-        while (a <= z && !resultado) {
-            m = (a + z) / 2;
-            if (v[m] == c) resultado = true;
-            else if (v[m] < c) a = m + 1;
-            else z = m - 1;
-        }
-        return resultado;
-    }
-
-    public static String obtenerAcronimo(String cadena) {
-        StringBuilder resultado = new StringBuilder();
-        char caracter;
-        int n = cadena.length();
-        for (int i = 0; i < n; i++) {
-            caracter = cadena.charAt(i);
-            if (caracter != ' ')
-                if (i == 0) resultado.append(caracter).append('.');
-                else if (cadena.charAt(i - 1) == ' ') resultado.append(caracter).append('.');
-        }
-        return resultado.toString();
-    }
 }
