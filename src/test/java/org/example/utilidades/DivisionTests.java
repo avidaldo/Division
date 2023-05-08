@@ -72,9 +72,9 @@ class DivisionTests {
         Assertions.assertThrows(ArithmeticException.class, () -> {
             float i = 1 / 0;
         });
-        Assertions.assertThrows(NumberFormatException.class, () -> {
+/*        Assertions.assertThrows(NumberFormatException.class, () -> {
             float i = 1 / 0;
-        });
+        });*/
 
     }
 
